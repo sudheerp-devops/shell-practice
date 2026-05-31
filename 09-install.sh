@@ -9,13 +9,16 @@ if [ $USERID -ne 0 ]; then
  exit 1
 fi
 
-# Installing mySQL
-
-dnf install mysqljdkfj -y # -y means Install mySQL without any interruptions
-
-if [ $? -ne 0 ]; then
- echo "Installing mySQL is.... FAILED"
- exit 1
+#check mysql ia already installed or not, if not install
+dnf list installed mysql
+if[ $? -ne 0 ]; then
+ echo "mySQL is already installed.... SKIPPING"
 else
- echo "Installing mySQL is.... SUCCESS"
+dnf install mysql -y # -y means Install mySQL without any interruptions
+    if [ $? -ne 0 ]; then
+     echo "Installing mySQL is.... FAILED"
+    exit 1
+    else
+     echo "Installing mySQL is.... SUCCESS"
+    fi
 fi
