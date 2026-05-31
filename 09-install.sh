@@ -11,7 +11,7 @@ fi
 
 # Installing mySQL
 
-dnf install mysql -y # -y means Install mySQL without any interruptions
+dnf install mysqljdkfj -y # -y means Install mySQL without any interruptions
 
 if [ $? -ne 0 ]; then
  echo "Installing mySQL is.... FAILED"
