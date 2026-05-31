@@ -15,6 +15,7 @@ dnf install mysql -y # -y means Install mySQL without any interruptions
 
 if [ $? -ne 0 ]; then
  echo "Installing mySQL is.... FAILED
+ exit 1
 else
  echo "Installing mySQL is.... SUCCESS
 fi
