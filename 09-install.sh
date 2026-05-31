@@ -11,7 +11,7 @@ fi
 
 #check mysql ia already installed or not, if not install
 dnf list installed mysql
-if [ $? -ne 0 ]; then
+if [ $? -eq 0 ]; then
  echo "mySQL is already installed.... SKIPPING"
 else
 dnf install mysql -y # -y means Install mySQL without any interruptions
