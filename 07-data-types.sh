@@ -9,11 +9,11 @@ echo "Total: $TOTAL"
 
 MOVIES=("RRR" "Varanasi" "Pushpa")
 
-echo "All movies are: $(MOVIES[@])"
+echo "All movies are: ${MOVIES[@]}"
 
-echo "First movie in the list: $(MOVIES[0])"
+echo "First movie in the list: ${MOVIES[0]}"
 
-echo "Second movie in the list: $(MOVIES[1])"
+echo "Second movie in the list: ${MOVIES[1]}"
 
-echo "Third movie in the list: $(MOVIES[2])"
+echo "Third movie in the list: ${MOVIES[2]}"
 
