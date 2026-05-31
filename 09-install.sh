@@ -6,4 +6,15 @@ USERID=$(id -u) # id -u gives the id of the user. If root user it gives 0 or for
 
 if [ $USERID -ne 0 ]; then
  echo "Please run this script with rot access"
+ exit 1
+fi
+
+# Installing mySQL
+
+dnf install mysql -y # -y means Install mySQL without any interruptions
+
+if [ $? -ne 0 ]; then
+ echo "Installing mySQL is.... FAILED
+else
+ echo "Installing mySQL is.... SUCCESS
 fi
