@@ -3,7 +3,7 @@
 NUM1=10
 NUM2=20
 
-TOTAL=(($SUM1+$SUM2))
+TOTAL=$(($SUM1+$SUM2))
 
 echo "Total: $TOTAL"
 
